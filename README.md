@@ -1,2 +1,2 @@
-# SFMLTrafficLIghter
-A simple project of simulation Traffic Ligther using SFML
+# SFMLTrafficLighter
+A simple project of simulation Traffic Ligther using SFML.
