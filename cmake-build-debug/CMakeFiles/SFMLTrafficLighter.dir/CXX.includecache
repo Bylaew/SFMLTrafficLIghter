@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/bylaew/CLionProjects/SFMLTrafficLighter/Car.cpp
-Car.h
-/home/bylaew/CLionProjects/SFMLTrafficLighter/Car.h
-
 /home/bylaew/CLionProjects/SFMLTrafficLighter/Car.h
 SFML/Graphics.hpp
 -
+
+/home/bylaew/CLionProjects/SFMLTrafficLighter/Lighter.cpp
+Lighter.h
+/home/bylaew/CLionProjects/SFMLTrafficLighter/Lighter.h
 
 /home/bylaew/CLionProjects/SFMLTrafficLighter/Lighter.h
 SFML/Graphics.hpp
