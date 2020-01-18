@@ -77,11 +77,11 @@ sf::Vector2f Lighter::getPosition() {
 }
 
 
-void Lighter::show(sf::RenderWindow &window) {
-    window.draw(lighter.green);
-    window.draw(lighter.yellow);
-    window.draw(lighter.red);
-    window.draw(lighter.box);
-    window.draw(lighter.stick);
+void Lighter::show(sf::RenderWindow *window) {
+    window->draw(lighter.green);
+    window->draw(lighter.yellow);
+    window->draw(lighter.red);
+    window->draw(lighter.box);
+    window->draw(lighter.stick);
 }
 

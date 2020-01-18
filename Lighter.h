@@ -1,4 +1,9 @@
-#pragma once
+//
+// Created by bylaew on 19.01.2020.
+//
+
+#ifndef SFMLTRAFFICLIGHTER_LIGHTER_H
+#define SFMLTRAFFICLIGHTER_LIGHTER_H
 
 #include <SFML/Graphics.hpp>
 
@@ -32,6 +37,7 @@ public:
 
     sf::Vector2f getPosition();
 
-    void show(sf::RenderWindow &);
+    void show(sf::RenderWindow *);
 };
 
+#endif

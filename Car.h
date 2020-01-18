@@ -1,4 +1,9 @@
-#pragma once
+//
+// Created by bylaew on 19.01.2020.
+//
+
+#ifndef SFMLTRAFFICLIGHTER_CAR_H
+#define SFMLTRAFFICLIGHTER_CAR_H
 
 #include <SFML/Graphics.hpp>
 
@@ -12,9 +17,9 @@ private:
         sf::CircleShape wheelTwo;
         sf::CircleShape inWheelOne;
         sf::CircleShape inWheelTwo;
-        float angle;
-        float speed;
+        float inWHeelAngle;
     } car;
+    float speed;
 
     void setPosition(sf::Vector2f);
 
@@ -33,6 +38,7 @@ public:
 
     sf::Vector2f getPosition();
 
-    void show(sf::RenderWindow &);
+    void show(sf::RenderWindow *);
 };
 
+#endif
