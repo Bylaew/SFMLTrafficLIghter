@@ -2,7 +2,7 @@
 // Created by bylaew on 19.01.2020.
 //
 
-#include "World.h"
+#include "../Headers/World.h"
 
 void World::initWindow() {
     window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "Traffic Lighter");

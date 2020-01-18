@@ -1,4 +1,4 @@
-#include "Lighter.h"
+#include "../Headers/Lighter.h"
 
 
 void Lighter::update() {
