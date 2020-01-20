@@ -3,7 +3,7 @@
 void Car::update() {
 
     car.corpse.setPosition(position);
-    car.corpse.setFillColor(sf::Color::Magenta);
+    car.corpse.setFillColor(sf::Color::Blue);
     car.corpse.setOutlineColor(sf::Color::Cyan);
     car.corpse.setOutlineThickness(1);
     car.corpse.setSize(sf::Vector2f(450, 120));

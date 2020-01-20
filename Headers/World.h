@@ -6,6 +6,8 @@
 #define SFMLTRAFFICLIGHTER_WORLD_H
 
 #include <SFML/Graphics.hpp>
+#include "../State.h"
+#include "../GameState.h"
 #include "Lighter.h"
 #include "Car.h"
 
@@ -15,12 +17,15 @@ private:
     sf::Event event;
     Car *car;
     Lighter *lighter;
+    std::stack<State *> states;
     sf::Clock clock;
     sf::Clock shortClock;
     sf::Time shortClockElapsed;
     float deltaTime;
 
     void initWindow();
+
+    void initStates();
 
 public:
     World();

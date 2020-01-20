@@ -1,22 +1,26 @@
-//
-// Created by bylaew on 19.01.2020.
-//
-
 #include "../Headers/World.h"
 
 void World::initWindow() {
     window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "Traffic Lighter");
 }
 
+void World::initStates() {
+    states.push(new GameState(window));
+}
+
 World::World() {
     initWindow();
     shortClockElapsed = shortClock.getElapsedTime();
-    car = new Car(sf::Vector2f(560.f,600.f));
-    lighter = new Lighter(sf::Vector2f(1400.f,250.f));
+    car = new Car(sf::Vector2f(560.f, 600.f));
+    lighter = new Lighter(sf::Vector2f(1400.f, 250.f));
 }
 
 World::~World() {
     delete window;
+    while (!states.empty()) {
+        delete states.top();
+        states.pop();
+    }
 }
 
 void World::eventUpdate() {
@@ -43,9 +47,12 @@ void World::updateDeltaTime() {
 }
 
 void World::update() {
+    eventUpdate();
+    if (!states.empty())
+        states.top()->update(deltaTime);
     car->moveForward();
     car->canRide = !(lighter->active != 1 && car->getPosition().x + 450 ==
-                                           lighter->getPosition().x);
+                                             lighter->getPosition().x);
     if (shortClockElapsed.asSeconds() > 10 &&
         lighter->active != 2) {
         lighter->updateLight();
@@ -53,11 +60,12 @@ void World::update() {
     } else if (lighter->active == 2 && shortClockElapsed.asSeconds() > 3) {
         lighter->updateLight();
     }
-    eventUpdate();
 }
 
 void World::render() {
     window->clear(sf::Color::Black);
+    if (!states.empty())
+        states.top()->render();
     lighter->show(window);
     car->show(window);
     window->display();

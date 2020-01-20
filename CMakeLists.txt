@@ -18,5 +18,5 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(SFMLTrafficLighter main.cpp Headers/Car.h Source/Car.cpp Headers/Lighter.h Source/Lighter.cpp Source/World.cpp Headers/World.h)
+add_executable(SFMLTrafficLighter main.cpp Headers/Car.h Source/Car.cpp Headers/Lighter.h Source/Lighter.cpp Source/World.cpp Headers/World.h State.cpp State.h GameState.cpp GameState.h Entity.cpp Entity.h)
 target_link_libraries (SFMLTrafficLighter sfml-graphics sfml-window sfml-system)
