@@ -5,11 +5,12 @@ void World::initWindow() {
 }
 
 void World::initStates() {
-    states.push(new GameState(window));
+    states.push(new WorldState(window));
 }
 
 World::World() {
     initWindow();
+    initStates();
     shortClockElapsed = shortClock.getElapsedTime();
     car = new Car(sf::Vector2f(560.f, 600.f));
     lighter = new Lighter(sf::Vector2f(1400.f, 250.f));

@@ -2,19 +2,19 @@
 // Created by bylaew on 20.01.2020.
 //
 
-#ifndef SFMLTRAFFICLIGHTER_GAMESTATE_H
-#define SFMLTRAFFICLIGHTER_GAMESTATE_H
+#ifndef SFMLTRAFFICLIGHTER_WORLDSTATE_H
+#define SFMLTRAFFICLIGHTER_WORLDSTATE_H
 
 
 #include "State.h"
 
-class GameState : public State {
+class WorldState : public State {
 private:
     Entity tmp;
 public:
-    GameState(sf::RenderWindow *);
+    WorldState(sf::RenderWindow *);
 
-    ~GameState();
+    ~WorldState();
 
     void end();
 
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //SFMLTRAFFICLIGHTER_GAMESTATE_H
+#endif //SFMLTRAFFICLIGHTER_WORLDSTATE_H

@@ -7,7 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../State.h"
-#include "../GameState.h"
+#include "../WorldState.h"
 #include "Lighter.h"
 #include "Car.h"
 
